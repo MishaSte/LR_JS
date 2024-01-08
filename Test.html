@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Степаниця Михайло Сергійович ТР-з21<br>Тема: Адаптивний веб-дизайн. Grid CSS</h1>
+  </header>
+  <div id="testContainer">
+    <form>
+      <input style="cursor: pointer;" name="name" type="text" id="name" placeholder="ПІБ">
+      <input style="cursor: pointer;" name="group" type="text" id="group" placeholder="Група">
+    </form>
+    <div id="question1">
+      <p>Для чого найкраще використовувати Grid CSS?</p>
+      <ul>
+        <li><input type="radio" name="question1" value="Варіант відповіді1">Тільки для горизонтального вирівнювання елементів<br></li>
+        <li><input type="radio" name="question1" value="Варіант відповіді2">Для створення двовимірних макетів<br></li>
+        <li><input type="radio" name="question1" value="Варіант відповіді3">Тільки для дизайну мобільних додатків<br></li>
+      </ul>
+     </div>
+     <div id="question2">
+      <p>Які з наступних властивостей є важливими для налаштування Grid-контейнера?(оберіть кілька варіантів)</p> <!--Відповідь 1-2-->
+      <ul>
+        <li><input type="checkbox" name="question2" value="Варіант відповіді1">display: grid;<br></li>
+        <li><input type="checkbox" name="question2" value="Варіант відповіді2">grid-template-columns;<br></li>
+        <li><input type="checkbox" name="question2" value="Варіант відповіді3">flex-flow<br></li>
+      </ul>
+    </div>
+    <div id="question_3">
+      <p>Яка основна перевага використання Grid CSS?</p>
+      <select name="question3" id="question3">
+        <option value="">Оберіть варіант відповіді</option>
+        <option value="Варіант відповіді1">Швидкість завантаження сторінки</option>
+        <option value="Варіант відповіді2">Гнучкість управління макетом</option>
+        <option value="Варіант відповіді3">Здатність адаптуватися до будь-якого розміру екрану</option>
+        <option value="Варіант відповіді4">Легкість інтеграції з іншими бібліотеками</option>
+      </select>
+    </div>
+    <div id="question4">
+      <p>Створити HTML структуру та CSS, щоб відобразити три блоки в ряд, використовуючи Grid CSS.<br>
+        1. Створіть "div" з класом container як грід контейнер.<br>
+        2. Додайте три "div" з класом box всередину контейнера.<br>
+        3. Визначте "container" як грід контейнер з трьома колонками однакової ширини та розривами 10px.<br>
+        4. Кожен "box" має мати фоновий колір "red", падінг 20 пікселів та центрований текст.</p>
+        <textarea id="codeInput" cols="30" rows="10" placeholder="Введіть код"></textarea>
+        <div id="codeOutput"></div>
+        <button style="cursor: pointer;" onclick="applyCode()">Enter</button>
+      </div>
+      <div id="orderQuestion">
+        <p>Впорядкуйте наступні компоненти структури адаптивного макету</p>
+        <ul class="no-shuffle">
+          <li>
+            <select id="item1Order">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="item1Order">Головний контент</label>
+          </li>
+          <li>
+            <select id="item2Order">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="item2Order">Шапка сайту з логотипом і навігацією</label>
+          </li>
+          <li>
+            <select id="item3Order">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="item3Order">Сайдбар з додатковими функціями</label>
+          </li>
+          <li>
+            <select id="item4Order">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="item4Order">Підвал сайту з контактною інформацією</label>
+          </li>
+          <li>
+            <select id="item5Order">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="item5Order">Додатковий розділ (відгуки клієнтів)</label>
+          </li>
+        </ul>
+      </div>
+      <div id="question6">
+        <p>В чому різниця між align-content та justify-content в CSS Grid?</p>
+        <ul>
+          <li><input type="radio" name="question6" value="Варіант відповіді1">align-content вирівнює вміст сітки вздовж осі стовпчика,<br>тоді як justify-content вирівнює вміст сітки вздовж осі рядка<br></li>
+          <li><input type="radio" name="question6" value="Варіант відповіді2">align-content змінює відстань між елементами сітки,<br>а justify-content змінює розмір контейнера сітки<br></li>
+          <li><input type="radio" name="question6" value="Варіант відповіді3">align-content вирівнює вміст сітки вздовж осі рядка,<br>тоді як justify-content вирівнює вміст сітки вздовж осі стовпчика<br></li>
+        </ul>
+      </div>
+      <div id="question7">
+        <p>Які з наступних методів використовуються для вирівнювання елементів всередині Grid-контейнера?</p>
+        <ul>
+          <li><input type="checkbox" name="question7" value="Варіант відповіді1">justify-content;<br></li>
+          <li><input type="checkbox" name="question7" value="Варіант відповіді2">place-items;<br></li>
+          <li><input type="checkbox" name="question7" value="Варіант відповіді3">align-content;<br></li>
+        </ul>
+      </div>
+      <div id="question8">
+        <p>Що таке Grid track?</p>
+        <ul>
+          <li><input type="radio" name="question8" value="Варіант відповіді1">Простір між лініями двох сусідніх рядків і двох сусідніх стовпців<br></li>
+          <li><input type="radio" name="question8" value="Варіант відповіді2">Розділові лінії, що становлять структуру для сітки<br></li>
+          <li><input type="radio" name="question8" value="Варіант відповіді3">Простір між двома сусідніми лініями<br></li>
+        </ul>
+      </div>
+      <div id="question9">
+        <p>В яких випадках краще використовувати Grid CSS, а не Flexbox?</p>
+        <ul>
+          <li><input type="checkbox" name="question9" value="Варіант відповіді1">Для створення одновимірних макетів<br></li> 
+          <li><input type="checkbox" name="question9" value="Варіант відповіді2">Коли потрібно створити комплексний макет із багатьма рядками та стовпцями<br></li>
+          <li><input type="checkbox" name="question9" value="Варіант відповіді3">Коли дизайн вимагає використання шаблонних областей<br></li>
+        </ul>
+      </div>
+      <p>Встановіть відповідність</p>
+      <div id="question10">
+        <div class="terms">
+          <p>Grid Container</p> 
+          <p>Grid Item</p>
+          <p>Grid Line</p>
+          <p>Grid Track</p>
+        </div>
+        <div class="answers">
+          <ul id="draggable_list">
+            <li draggable="true" id="dragtarget1">Елемент HTML, який використовує display: grid або display: inline-grid</li>
+            <li draggable="true" id="dragtarget2">Одиниця контенту в рамках Grid контейнера</li>
+            <li draggable="true" id="dragtarget3">Розділові лінії, що становлять структуру для сітки</li>
+            <li draggable="true" id="dragtarget4">Простір між двома сусідніми лініями</li>
+          </ul>
+        </div>
+        <div>
+          <button id="finishTestBtn" style="cursor: pointer;">Завершити тест</button>
+        </div>
+        <script src="LR.js"></script>
+      </body>
+      </html>
+
