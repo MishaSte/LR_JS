@@ -37,6 +37,7 @@ app.post('/test', function(req, res){
     subject: 'Результати тесту',
     text: emailText
   };
+  // відправка повідомлення на gmail не працює, скоріше за все через зміну правил google. При тестуванні за допомогою сервісу 'ethereal' повідомлення відправляється.
   const chatId = '-519873227';
   bot.sendMessage(chatId, emailText);
   mailer(message)
