@@ -3,7 +3,7 @@ const mailer = require(`./Node`)
 const TelegramBot = require('node-telegram-bot-api');
 
 
-const token = '1858844290:AAG4xVcUFcD6nNnKqz1biKvcGrhwNCsOHMk';
+const token = '';
 const bot = new TelegramBot(token, { polling: true });
 
 
